@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:blurrycontainer/blurrycontainer.dart';
 
 class Eventcard extends StatelessWidget {
   const Eventcard({super.key});
@@ -8,46 +9,26 @@ class Eventcard extends StatelessWidget {
     return Column(
       children: [
         Container(
-          alignment: Alignment.center,
-                  height: 100,
-                  width: 400,
-                  decoration: BoxDecoration(
-                    color: Colors.red,
-                    borderRadius: BorderRadius.circular(8)
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        height: 80,
-                        width: 80,
-                        decoration: BoxDecoration(
-                          color: Colors.orangeAccent
-                        ),
-                        child: Image.asset('assets/bharathanatyam.jpg',fit: BoxFit.contain,),
-                      ),
-        
-                      SizedBox(width: 10,),
-        
-                      Container(
-                        height: 80,
-                        width: 290,
-                        decoration: BoxDecoration(
-                          color: Colors.orange
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text('BHARATHANATYAM'),
-                            Text('STAGE 1'),
-                            Text('21th MAR 24'),
-                            Text('10PM')
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-          
+            height: 200,
+            width: 1500,
+            decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8),
+            image: DecorationImage(image: AssetImage('assets/cult.png',),fit: BoxFit.fill)
+            ),
+            child: BlurryContainer(
+              blur: 3,
+              borderRadius: BorderRadius.circular(8),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('EVENT : BHARATHANATYAM'),
+                  Text('VENUE : STAGE 1'),
+                  Text('DATE : 21th MAR 24'),
+                  Text('TIME : 10PM')
+                ],
+              ),
+              ),        
         ),
         SizedBox(height: 10,)
       ],

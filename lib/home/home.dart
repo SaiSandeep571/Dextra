@@ -11,24 +11,36 @@ class Homescreen extends StatefulWidget {
 class _HomescreenState extends State<Homescreen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Upcoming events'),
-
-            Expanded(
-              child: ListView(
-                children: [
-                  Eventcard(),
-                  Eventcard(),
-                  Eventcard()
-                  ]
-                  )
-                  )
-          ],
-        ),
+    return Scaffold(
+      backgroundColor: Color.fromARGB(255, 126, 17, 9),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Container(
+            margin: EdgeInsets.all(20),
+            child: Text(
+              'Upcoming events',
+              style: TextStyle(
+                fontSize: 25,
+                fontWeight: FontWeight.w500,
+                color: Colors.white
+                ),
+                )
+                ),
+    
+          Expanded(
+            child: ListView(
+              children: [
+                Eventcard(),
+                Eventcard(),
+                Eventcard(),
+                Eventcard(),
+                Eventcard(),
+                Eventcard(),
+                ]
+                )
+                )
+        ],
       ),
     );
   }
