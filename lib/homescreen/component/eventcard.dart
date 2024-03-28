@@ -36,45 +36,79 @@ class Eventcard extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
-                    child: Text('I . Akleema M Javed  (S6 CSE) ',
-                              style: GoogleFonts.poppins(
-                                color: Color(0xFFFFFFFF),
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600
-                              )
-                              ),
+                    child: Row(
+                      children: [
+                        Text('I . Akleema M Javed  ',
+                                  style: GoogleFonts.poppins(
+                                    color: Color(0xFFFFFFFF),
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w600
+                                  )
+                                  ),
+                        Text('(S6 CSE) ',
+                                  style: GoogleFonts.poppins(
+                                    color: Color(0xFFFFFFFF),
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.w600
+                                  )
+                                  ),
+                      ],
+                    ),
                   ),
                   Image.asset('assets/RUDRA.png',height: 23,width: 23,)            
                 ],
               ),
-              Row(
+               Row(
                 children: [
                   Expanded(
-                    child: Text('I . Akleema M Javed  (S6 CSE) ',
-                              style: GoogleFonts.poppins(
-                                color: Color(0xFFFFFFFF),
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600
-                              )
-                              ),
+                    child: Row(
+                      children: [
+                        Text('I . Akleema M Javed  ',
+                                  style: GoogleFonts.poppins(
+                                    color: Color(0xFFFFFFFF),
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w600
+                                  )
+                                  ),
+                        Text('(S6 CSE) ',
+                                  style: GoogleFonts.poppins(
+                                    color: Color(0xFFFFFFFF),
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.w600
+                                  )
+                                  ),
+                      ],
+                    ),
                   ),
                   Image.asset('assets/RUDRA.png',height: 23,width: 23,)            
                 ],
               ),
-              Row(
+               Row(
                 children: [
                   Expanded(
-                    child: Text('I . Akleema M Javed  (S6 CSE) ',
-                              style: GoogleFonts.poppins(
-                                color: Color(0xFFFFFFFF),
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600
-                              )
-                              ),
+                    child: Row(
+                      children: [
+                        Text('I . Akleema M Javed  ',
+                                  style: GoogleFonts.poppins(
+                                    color: Color(0xFFFFFFFF),
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w600
+                                  )
+                                  ),
+                        Text('(S6 CSE) ',
+                                  style: GoogleFonts.poppins(
+                                    color: Color(0xFFFFFFFF),
+                                    fontSize: 9,
+                                    fontWeight: FontWeight.w600
+                                  )
+                                  ),
+                      ],
+                    ),
                   ),
                   Image.asset('assets/RUDRA.png',height: 23,width: 23,)            
                 ],
-              )
+              ),
+             
             ],
           ),
         ),
