@@ -1,4 +1,4 @@
-import 'package:dextra/home/home.dart';
+import 'package:dextra/homescreen/home.dart';
 import 'package:flutter/material.dart';
 
 void main() {
