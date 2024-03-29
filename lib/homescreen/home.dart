@@ -1,4 +1,5 @@
 import 'package:dextra/homescreen/component/eventcard.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -18,7 +19,7 @@ class _HomescreenState extends State<Homescreen> {
         backgroundColor: Colors.black,
         body: 
         Container(
-          padding:EdgeInsets.all(20),
+          padding:EdgeInsets.all(25),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -38,6 +39,8 @@ class _HomescreenState extends State<Homescreen> {
                 fontWeight: FontWeight.w700
               )
               ),
+
+              SizedBox(height:20),
           
               Center(
                 child: Container(
@@ -47,14 +50,17 @@ class _HomescreenState extends State<Homescreen> {
                     color: Color(0xFF1E1E1E),
                     borderRadius: BorderRadius.circular(8)
                   ),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      _Rank('assets/rank.png','TEAM RUDRA','HARITHA,RINU','assets/RUDRA.png','54  - P'),
-                      _Rank('assets/rank.png','TEAM AGNI','ANJALI,ARUN','assets/AGNI.png','125  - P'),
-                      _Rank('assets/rank.png','TEAM ASTRA','NANDANA,ABHINAND','assets/ASTRA.png','98  - P'),
-                      _Rank('assets/rank.png','TEAM VAJRA','ARDRA,ADHITH','assets/VAJRA.png','1003  - P')
-                    ],
+                  child: Container(
+                    margin: EdgeInsets.all(20),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        _Rank('assets/rank.png','TEAM RUDRA','HARITHA,RINU','assets/RUDRA.png','54  - P'),
+                        _Rank('assets/rank.png','TEAM AGNI','ANJALI,ARUN','assets/AGNI.png','125  - P'),
+                        _Rank('assets/rank.png','TEAM ASTRA','NANDANA,ABHINAND','assets/ASTRA.png','98  - P'),
+                        _Rank('assets/rank.png','TEAM VAJRA','ARDRA,ADHITH','assets/VAJRA.png','103  - P')
+                      ],
+                    ),
                   ),
                 ),
               ),
@@ -75,11 +81,19 @@ class _HomescreenState extends State<Homescreen> {
                   SizedBox(width: 35),
           
                   Expanded(
-                    child: SizedBox(
-                      height: 28,
+                    child: Container(
+                      height: 30,
                       width: 192,
+                      decoration: BoxDecoration(
+                        color: Color(0xFF1E1E1E),
+                        borderRadius: BorderRadius.circular(10)
+                      ),
                       child: TextFormField( 
-                        
+                        style: GoogleFonts.poppins(
+                          fontSize:13,
+                          color:Colors.white,
+                          fontWeight:FontWeight.w600
+                        ),
                         decoration: InputDecoration(
                           hintText: 'Search Event',
                           hintStyle: GoogleFonts.poppins(
@@ -87,13 +101,8 @@ class _HomescreenState extends State<Homescreen> {
                             fontSize: 12,
                             fontWeight: FontWeight.w400         
                           ),
-                          filled: true,
-                          fillColor: Color(0xFF1E1E1E),
                           prefixIcon: Icon(Icons.search_rounded),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(8),
-                            borderSide: BorderSide.none
-                          )
+                          border: InputBorder.none
                         ),
                       ),
                     ),
@@ -108,10 +117,10 @@ class _HomescreenState extends State<Homescreen> {
                 child: ListView(
                   children: [
                     
-                    // Eventcard(),
-                    // Eventcard(),
-                    // Eventcard(),
-                    // Eventcard(),
+                    Eventcard(),
+                    Eventcard(),
+                    Eventcard(),
+                    Eventcard(),
                     ]
                     ),
               )
@@ -138,31 +147,42 @@ class _HomescreenState extends State<Homescreen> {
                     height: 42,
                     ),
 
+
+                    SizedBox(width: 15),
+
                     
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text( teamname,
-                          style: GoogleFonts.poppins(
-                            color: Color(0xFFFFFFFF),
-                            fontSize: 12,
-                            fontWeight: FontWeight.w700
-                          )
-                          ),
-                          Text(captainname,
-                          style: GoogleFonts.poppins(
-                            color: Color(0xFFFFFFFF),
-                            fontSize: 8,
-                            fontWeight: FontWeight.w700
-                          )
-                          ),
-                      ],
+                    Expanded(
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text( teamname,
+                            style: GoogleFonts.poppins(
+                              color: Color(0xFFFFFFFF),
+                              fontSize: 12,
+                              fontWeight: FontWeight.w700
+                            )
+                            ),
+                            Text(captainname,
+                            style: GoogleFonts.poppins(
+                              color: Color(0xFFFFFFFF),
+                              fontSize: 8,
+                              fontWeight: FontWeight.w700
+                            )
+                            ),
+                        ],
+                      ),
                     ),
 
-                    Image.asset(logo,
-                        width: 42,
-                        height: 42,
+                    SizedBox(width: 10),
+
+                    Expanded(
+                      child: Image.asset(logo,
+                          width: 28,
+                          height: 28,
+                      ),
                     ),
+
+                    SizedBox(width: 10),
 
                     Text( point,
                           style: GoogleFonts.poppins(
